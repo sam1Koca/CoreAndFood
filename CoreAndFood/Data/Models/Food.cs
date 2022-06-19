@@ -11,6 +11,10 @@
         public string ThumbNailImageUrl { get; set; } // Büyük halinin öncesindeki küçük halini tutacak
         public int Stock { get; set; }
 
+        public int CategoryID { get; set; }
+        public virtual Category Category { get; set; }
+
+
 
     }
 }
