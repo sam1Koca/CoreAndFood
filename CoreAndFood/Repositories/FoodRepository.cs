@@ -4,41 +4,9 @@ using System.Linq;
 
 namespace CoreAndFood.Repositories
 {
-    public class FoodRepository
+    public class FoodRepository:GenericRepository<Food>
     {
-        Context context = new Context();
-
-        public void FoodAdd(Food food) {
-
-            context.Foods.Add(food);
-            context.SaveChanges();
-        }
-
-        public void FoodDelete(Food food)
-        {
-
-            context.Foods.Remove(food);
-            context.SaveChanges();
-        }
-
-        public void FoodUpdate(Food food)
-        {
-
-            context.Foods.Update(food);
-            context.SaveChanges();
-        }
-
-        public List<Food> FoodList(Food food)
-        {
-
-            return context.Foods.ToList();
-        }
-
-        public void GetFood(int id)
-        {
-
-            context.Foods.Find(id);
-        }
+       
 
     }
 }
