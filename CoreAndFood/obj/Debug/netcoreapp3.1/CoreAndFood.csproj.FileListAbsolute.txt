@@ -123,3 +123,4 @@ C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Core
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\CoreAndFood.Views.pdb
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Food\Index.cshtml.g.cs
+C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryAdd.cshtml.g.cs
