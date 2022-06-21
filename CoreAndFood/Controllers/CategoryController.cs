@@ -10,8 +10,6 @@ namespace CoreAndFood.Controllers
 
         public IActionResult Index()
         {
-            
-
             return View(categoryRepository.TList());
         }
 
@@ -24,8 +22,14 @@ namespace CoreAndFood.Controllers
         [HttpPost]
         public IActionResult CategoryAdd(Category category)
         {
-            
+            // Validation'a takılınca CategoryAdd Page'e tekrar yüklendir
+            if (!ModelState.IsValid) { 
+                
+                return View("CategoryAdd");
+            }
+
             categoryRepository.TAdd(category);
+
             return RedirectToAction("Index");
         }
     }

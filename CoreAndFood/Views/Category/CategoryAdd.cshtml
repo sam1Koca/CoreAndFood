@@ -16,6 +16,8 @@
 
     <h4>Category Name</h4>
     @Html.TextBoxFor(x => x.CategoryName , new {@class = "form-control"})
+    @Html.ValidationMessageFor(x => x.CategoryName , "" , new{@style="color:red"})
+
     <br />
     <h4>Category Description</h4>
     @Html.TextBoxFor(x => x.CategoryDescription , new {@class = "form-control"})
