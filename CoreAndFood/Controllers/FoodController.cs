@@ -9,7 +9,7 @@ namespace CoreAndFood.Controllers
         {
             FoodRepository foodRepository = new FoodRepository();
 
-            return View(foodRepository.TList());
+            return View(foodRepository.TList("Category"));
         }
     }
 }
