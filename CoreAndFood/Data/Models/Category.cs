@@ -8,6 +8,7 @@ namespace CoreAndFood.Data.Models
         public int CategoryID { get; set; }
 
         [Required(ErrorMessage = "Category Name cannot be Left blank")]
+        [StringLength(20, ErrorMessage = "Please only enter 5-20 characters", MinimumLength =5)]
         public string CategoryName { get; set; }
 
         public string CategoryDescription { get; set; }
