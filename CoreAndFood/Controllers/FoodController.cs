@@ -1,21 +1,34 @@
 ﻿using CoreAndFood.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using CoreAndFood.Data.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CoreAndFood.Controllers
 {
     public class FoodController : Controller
     {
         FoodRepository foodRepository = new FoodRepository(); // Global Object
+        Context context = new Context();
 
         public IActionResult Index()
         {
             return View(foodRepository.TList("Category"));
         }
 
+
         [HttpGet]
         public IActionResult AddFood()
         {
+            List<SelectListItem> selectLists = (from item in context.Categories.ToList()
+                                                select new SelectListItem
+                                                {
+                                                    Text = item.CategoryName,
+                                                    Value = item.CategoryID.ToString()
+
+                                                }).ToList();
+            ViewBag.value = selectLists;
             return View();
         }
 

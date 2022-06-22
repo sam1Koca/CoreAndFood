@@ -28,10 +28,7 @@
     @Html.TextBoxFor(x => x.Stock , new {@class="form form-control"})
 
     <h4>Category Name</h4>
-
-    <div style="resize:block;">
-    @Html.TextAreaFor(x => x.CategoryID , new { @class="form form-control"})
-    </div>
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.value, new {@class = "form form-control"})
 
     <br />
 
