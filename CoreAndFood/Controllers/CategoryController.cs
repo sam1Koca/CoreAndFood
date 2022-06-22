@@ -22,15 +22,30 @@ namespace CoreAndFood.Controllers
         [HttpPost]
         public IActionResult CategoryAdd(Category category)
         {
-            // Validation'a takılınca CategoryAdd Page'e tekrar yüklendir
-            if (!ModelState.IsValid) { 
-                
+            // Validation'a takılınca CategoryAdd Page'e tekrar yönlendir
+            if (!ModelState.IsValid)
+            {
+
                 return View("CategoryAdd");
             }
 
             categoryRepository.TAdd(category);
 
             return RedirectToAction("Index");
+        }
+
+        public IActionResult CategoryGet(int id)
+        {
+            var item = categoryRepository.TGet(id);
+
+            Category category = new Category()
+            {
+                CategoryName = item.CategoryName,
+                CategoryDescription = item.CategoryDescription,
+                CategoryID = item.CategoryID
+            };
+
+            return View(category);
         }
     }
 }

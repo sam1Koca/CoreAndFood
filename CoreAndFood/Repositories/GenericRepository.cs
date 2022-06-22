@@ -33,9 +33,9 @@ namespace CoreAndFood.Repositories
             context.SaveChanges();
         }
 
-        public void TGet(int id)
+        public T TGet(int id)
         {
-            context.Set<T>().Find(id);
+            return context.Set<T>().Find(id);
         }
 
         public List<T> TList(string parameter) //Food List alanında, categoryName göstermek için kullandık bu metodu.

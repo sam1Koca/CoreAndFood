@@ -38,7 +38,6 @@ namespace CoreAndFood.Controllers
             foodRepository.TAdd(food);
             return RedirectToAction("Index");
         }
-<<<<<<< HEAD
 
         public IActionResult DeleteFood(int id) {
 
@@ -46,7 +45,6 @@ namespace CoreAndFood.Controllers
             foodRepository.TDelete(food); // Bir diğer yöntemde burada Food'u newleyip, FoodID ye; gelen id paremetresini atarak silebilirim
             return RedirectToAction("Index");
         }
-=======
->>>>>>> parent of 087546b (Food Delete Written.)
+
     }
 }

@@ -10,8 +10,9 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>ID</th>
+        <th><strong>ID</strong></th>
         <th>Category Name</th>
+        <th>Status</th>
         <th>Delete</th>
         <th>Update</th>
     </tr>
@@ -19,10 +20,20 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>@item.CategoryID</td>
+            <td><strong>@item.CategoryID</strong></td>
             <td>@item.CategoryName</td>
+            @if(item.Status == true)
+            {
+                <td style="color:forestgreen"><strong>@item.Status  ✔️</strong></td>
+
+            }
+            else
+            {
+                <td style="color:darkred"><strong>@item.Status  ❌</strong></td>
+            }
+
             <td><a href="#" class="btn btn-danger">Delete</a></td>
-            <td><a href="#" class="btn btn-success">Update</a></td>
+            <td><a href="/Category/CategoryGet/@item.CategoryID" class="btn btn-success">Update</a></td>
         </tr>
     }
 

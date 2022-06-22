@@ -13,7 +13,11 @@ namespace CoreAndFood.Data.Models
 
         public string CategoryDescription { get; set; }
 
+        public bool Status {get; set; }
+
         public List<Food> Foods { get; set; } // Bir Kategori içerisinde, birden fazla food barındırabilir.
+
+        
 
     }
 }
