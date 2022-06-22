@@ -38,5 +38,12 @@ namespace CoreAndFood.Controllers
             foodRepository.TAdd(food);
             return RedirectToAction("Index");
         }
+
+        public IActionResult DeleteFood(int id) {
+
+            var value = context.Foods.Find(id);
+            foodRepository.TDelete(value); // Bir diğer yöntemde burada Food'u newleyip, FoodID ye; gelen id paremetresini atarak silebilirim
+            return RedirectToAction("Index");
+        }
     }
 }
