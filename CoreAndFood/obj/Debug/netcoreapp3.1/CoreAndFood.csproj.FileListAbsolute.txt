@@ -126,3 +126,4 @@ C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razo
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryAdd.cshtml.g.cs
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Food\AddFood.cshtml.g.cs
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Category\CategoryGet.cshtml.g.cs
+C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Food\FoodGet.cshtml.g.cs
