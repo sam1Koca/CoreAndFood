@@ -50,6 +50,15 @@ namespace CoreAndFood.Controllers
         {
             var x = foodRepository.TGet(id);
 
+            List<SelectListItem> selectLists = (from items in context.Categories.ToList()
+                                                select new SelectListItem
+                                                {
+                                                    Text = items.CategoryName,
+                                                    Value = items.CategoryID.ToString()
+
+                                                }).ToList();
+            ViewBag.value = selectLists;
+
             Food food = new Food()
             {
                 FoodID = x.FoodID,
@@ -62,6 +71,22 @@ namespace CoreAndFood.Controllers
             };
 
             return View(food);
+        }
+
+        [HttpPost]
+        public IActionResult FoodUpdate(Food food)
+        {
+            var x = foodRepository.TGet(food.FoodID);
+            x.Name = food.Name;
+            x.Stock = food.Stock;
+            x.Description = food.Description;
+            x.ImageURL = food.ImageURL;
+            x.Price = food.Price;
+            x.CategoryID = food.CategoryID;
+
+            foodRepository.TUpdate(x);
+
+            return RedirectToAction("Index");
         }
 
     }

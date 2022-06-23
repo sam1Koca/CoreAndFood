@@ -7,7 +7,7 @@
 <h1>Update Food Page</h1>
 <br />
 
-@using(Html.BeginForm("FoodUpdate", "Food", FormMethod.Post))
+@using (Html.BeginForm("FoodUpdate", "Food", FormMethod.Post))
 {
     <h4>Food İd</h4>
     @Html.TextBoxFor(x => x.FoodID , new {@class="form form-control"})
@@ -15,9 +15,8 @@
     <h4>Food Name</h4>
     @Html.TextBoxFor(x => x.Name , new {@class="form form-control"})
 
-   <h4>Category Name</h4>
-    @Html.TextBoxFor(x => x.CategoryID , new {@class="form form-control"})
-    @*Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.value, new {@class = "form form-control"}) *@
+    <h4>Category Name</h4>
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.value, new {@class = "form form-control"})
 
     <h4>Price ₺</h4>
     @Html.TextBoxFor(x => x.Price , new {@class="form form-control"})
