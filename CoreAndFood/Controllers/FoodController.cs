@@ -46,5 +46,23 @@ namespace CoreAndFood.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult FoodGet(int id)
+        {
+            var x = foodRepository.TGet(id);
+
+            Food food = new Food()
+            {
+                FoodID = x.FoodID,
+                CategoryID = x.CategoryID,
+                Name = x.Name,
+                Price = x.Price,
+                Stock = x.Stock,
+                Description = x.Description,
+                ImageURL = x.ImageURL
+            };
+
+            return View(food);
+        }
+
     }
 }
