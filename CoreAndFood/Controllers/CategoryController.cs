@@ -47,5 +47,29 @@ namespace CoreAndFood.Controllers
 
             return View(category);
         }
+
+        [HttpPost]
+        public IActionResult CategoryUpdate(Category category)
+        {
+            var value = categoryRepository.TGet(category.CategoryID);
+
+            value.CategoryName = category.CategoryName;
+            value.CategoryDescription = category.CategoryDescription;
+            value.Status = true;
+            categoryRepository.TUpdate(value);
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult CategoryDelete(int id)
+        {
+            var currentStatus = categoryRepository.TGet(id);
+            currentStatus.Status = false;
+
+            categoryRepository.TUpdate(currentStatus);
+
+            return RedirectToAction("Index");
+
+        }
     }
 }
