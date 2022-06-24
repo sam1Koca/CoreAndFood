@@ -131,3 +131,5 @@ C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\bin\Debug\netcoreapp3.1\JetB
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\bin\Debug\netcoreapp3.1\X.PagedList.dll
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\bin\Debug\netcoreapp3.1\X.PagedList.Mvc.Core.dll
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\CoreAndFood.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Index.cshtml.g.cs
+C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Index2.cshtml.g.cs
