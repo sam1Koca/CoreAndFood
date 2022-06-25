@@ -133,3 +133,4 @@ C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\bin\Debug\netcoreapp3.1\X.Pa
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\CoreAndFood.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Index.cshtml.g.cs
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Index2.cshtml.g.cs
+C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Index3.cshtml.g.cs
