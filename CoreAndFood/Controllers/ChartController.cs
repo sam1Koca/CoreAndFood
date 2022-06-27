@@ -67,6 +67,11 @@ namespace CoreAndFood.Controllers
             return Json(FoodList());
         }
 
+        public IActionResult Statistics()
+        {
+            return View();
+        }
+
         
         
     }
