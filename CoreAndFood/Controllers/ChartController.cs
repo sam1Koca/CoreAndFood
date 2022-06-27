@@ -82,12 +82,18 @@ namespace CoreAndFood.Controllers
 
 
             // Meyve Kategorisinde Kaç tane ürün var
-            var value3 = context.Foods.Where(x => x.CategoryID == 1).Count();
+            var foodİd = context.Categories.Where(x => x.CategoryName == "Fruit").
+                Select(y => y.CategoryID).
+                FirstOrDefault();
+
+            var value3 = context.Foods.Where(x => x.CategoryID == foodİd).Count();
             ViewBag.val3 = value3;
 
 
             //Sebze Kategorisinde kaç tane ürün var
-            var value4 = context.Foods.Where(x => x.CategoryID == 2).Count();
+            var value4 = context.Foods.Where(x => x.CategoryID == context.Categories.Where(z => z.CategoryName == "Vegetables").
+                Select(y => y.CategoryID).
+                FirstOrDefault()).Count();
             ViewBag.val4 = value4;
 
 
@@ -95,6 +101,9 @@ namespace CoreAndFood.Controllers
             var value5 = context.Foods.Sum(x => x.Stock);
             ViewBag.val5 = value5;
 
+            var value6 = context.Foods.Where(x => x.CategoryID == context.Categories.Where(y => y.CategoryName == "Legumes").Select(z => z.CategoryID)
+            .FirstOrDefault()).Count();
+            ViewBag.val6 = value6;
 
             return View();
         }
