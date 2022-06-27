@@ -69,6 +69,33 @@ namespace CoreAndFood.Controllers
 
         public IActionResult Statistics()
         {
+            Context context = new Context();
+
+            // Toplam Yemek Sayısı
+            var value1 = context.Foods.Count();
+            ViewBag.val1 = value1;
+
+
+            // Toplam Kategori Sayısı
+            var value2 = context.Categories.Count();
+            ViewBag.val2 = value2;
+
+
+            // Meyve Kategorisinde Kaç tane ürün var
+            var value3 = context.Foods.Where(x => x.CategoryID == 1).Count();
+            ViewBag.val3 = value3;
+
+
+            //Sebze Kategorisinde kaç tane ürün var
+            var value4 = context.Foods.Where(x => x.CategoryID == 2).Count();
+            ViewBag.val4 = value4;
+
+
+            //Yemek Tablosunda Toplamda Kaç Ürün var (Her Yemeğin Stok Adedini topla)
+            var value5 = context.Foods.Sum(x => x.Stock);
+            ViewBag.val5 = value5;
+
+
             return View();
         }
 
