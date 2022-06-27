@@ -101,11 +101,30 @@ namespace CoreAndFood.Controllers
             var value5 = context.Foods.Sum(x => x.Stock);
             ViewBag.val5 = value5;
 
+
+            // Baklagillerden Kaç Ürün Var
             var value6 = context.Foods.Where(x => x.CategoryID == context.Categories.Where(y => y.CategoryName == "Legumes").Select(z => z.CategoryID)
             .FirstOrDefault()).Count();
             ViewBag.val6 = value6;
 
+
+            // Food Tablosunda Stok Adedi En Fazla Olan Ürünü Getir.
+            var value7 = context.Foods.OrderByDescending(x => x.Stock).Select(y => y.Name).FirstOrDefault();
+            ViewBag.val7 = value7;
+
+
+            // Food Tablosunda stok adedi en az olan Ürünü getir.
+            var value8 = context.Foods.OrderBy(x => x.Stock).Select(y => y.Name).FirstOrDefault();
+            ViewBag.val8 = value8;
+
+
+            // Foodların ortalama satış fiyatı
+            var value9 = context.Foods.Average(x => x.Price).ToString("0.00");
+            ViewBag.val9 = value9;
+
             return View();
+
+
         }
 
         
