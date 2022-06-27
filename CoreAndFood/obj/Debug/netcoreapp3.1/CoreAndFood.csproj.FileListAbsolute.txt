@@ -134,3 +134,4 @@ C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Core
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Index.cshtml.g.cs
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Index2.cshtml.g.cs
 C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Index3.cshtml.g.cs
+C:\Users\sayit\source\repos\CoreAndFood\CoreAndFood\obj\Debug\netcoreapp3.1\Razor\Views\Chart\Statistics.cshtml.g.cs
