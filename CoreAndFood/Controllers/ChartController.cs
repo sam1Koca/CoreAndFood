@@ -119,8 +119,23 @@ namespace CoreAndFood.Controllers
 
 
             // Foodların ortalama satış fiyatı
-            var value9 = context.Foods.Average(x => x.Price).ToString("0.00");
+            var value9 = context.Foods.Average(x => x.Price).ToString("0.00"); // Formatlama işlemi / değer 0.00 şeklinde gözüksün
             ViewBag.val9 = value9;
+
+
+            // Bir Kategorinin İçinde Bulunan Toplam Ürün/meyve Sayısı : Fruit
+            var value10 = context.Categories.Where(x => x.CategoryName == "Fruit").Select(y => y.CategoryID).FirstOrDefault();
+            var deger10Plus = context.Foods.Where(y => y.CategoryID == value10).Sum(x => x.Stock);
+            ViewBag.val10 = deger10Plus;
+
+
+            // Bir Kategorinin İçinde Bulunan Toplam Ürün/meyve Sayısı : Vegetables
+            var value11 = context.Categories.Where(x => x.CategoryName == "Vegetables").Select(y => y.CategoryID).FirstOrDefault();
+            var deger11Plus = context.Foods.Where(y => y.CategoryID == value11).Sum(x => x.Stock);
+            ViewBag.val11 = deger11Plus;
+
+            var value12 = context.Foods.OrderByDescending(x => x.Price).Select(y => y.Name).FirstOrDefault();
+            ViewBag.val12 = value12;
 
             return View();
 
