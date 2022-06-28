@@ -9,7 +9,7 @@ namespace CoreAndFood.Controllers
     {
         CategoryRepository categoryRepository = new CategoryRepository(); // CategoryRepository Classına ulaşmam gerek. (GlobalObject)
 
-        [Authorize]
+        // [Authorize]
         public IActionResult Index()
         {
             return View(categoryRepository.TList());
