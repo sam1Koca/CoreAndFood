@@ -16,6 +16,8 @@ namespace CoreAndFood.Data.Models
 
         public DbSet<Food> Foods { get; set; } // Foods Table
         public DbSet<Category> Categories { get; set; } // Category Table
+        public DbSet<Admin> Admins { get; set; }
+
 
 
     }
