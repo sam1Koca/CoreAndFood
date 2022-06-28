@@ -1,6 +1,7 @@
 ﻿using CoreAndFood.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using CoreAndFood.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CoreAndFood.Controllers
 {
@@ -8,6 +9,7 @@ namespace CoreAndFood.Controllers
     {
         CategoryRepository categoryRepository = new CategoryRepository(); // CategoryRepository Classına ulaşmam gerek. (GlobalObject)
 
+        [Authorize]
         public IActionResult Index()
         {
             return View(categoryRepository.TList());

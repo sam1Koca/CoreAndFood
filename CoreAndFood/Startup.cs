@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace CoreAndFood
 {
@@ -19,6 +20,11 @@ namespace CoreAndFood
             services.AddMvc();
 
             services.AddMvc(options => options.EnableEndpointRouting = false); // route configte hata vermemesi için
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x =>
+            {
+                x.LoginPath = "/Login/Index";
+            });
 
             
         }
