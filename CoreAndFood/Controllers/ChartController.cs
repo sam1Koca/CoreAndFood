@@ -1,7 +1,6 @@
 ﻿using CoreAndFood.Data;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using CoreAndFood.Data;
 using CoreAndFood.Data.Models;
 using System.Linq;
 
