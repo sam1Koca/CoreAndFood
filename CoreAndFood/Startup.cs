@@ -72,7 +72,7 @@ namespace CoreAndFood
                 {
                     routes.MapRoute(
                         name: "default",
-                        template: "{controller=Category}/{action=Index}/{id?}");
+                        template: "{controller}/{action}/{id?}");
                 });
 
             });
