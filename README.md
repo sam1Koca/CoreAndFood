@@ -13,17 +13,12 @@ Core And Food Adlı Projesi <a href="https://www.youtube.com/playlist?list=PLKnj
 <h2>🪐 About Core And Fodd Project:</h2>
   <ul>
   <ol>👀 Entity Framework</ol>
+  <ol>👀 MVC & Repositories Design Patterns</ol>
   <ol>👀 LINQ Queries</ol>
-  <ol>👀 Repositories & Generic Repository</ol>
-  <ol>👀 MVC Design Pattern</ol>
-  <ol>👀 Login-Logout & Registery Operations</ol>
-  <ol>👀 Include & DropDownList & Data Validation</ol>
+  <ol>👀 Autorize-Authentication & Login-Logout Operations</ol>
   <ol>👀 CRUD Operations</ol>
   <ol>👀 Paging & Dynamic Google Chart</ol>
-  <ol>👀 Statistics</ol>
-  <ol>👀 Authorize</ol>
-  <ol>👀 Allow Anonymous</ol>
+  <ol>👀 Statistics Process</ol>
   <ol>👀 Search Operations</ol>
-    
   </ul>
 </article>
