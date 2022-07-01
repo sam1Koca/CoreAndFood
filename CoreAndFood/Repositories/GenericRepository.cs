@@ -1,7 +1,9 @@
 ﻿using CoreAndFood.Data.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace CoreAndFood.Repositories
 {
@@ -41,6 +43,11 @@ namespace CoreAndFood.Repositories
         public List<T> TList(string parameter) //Food List alanında, categoryName göstermek için kullandık bu metodu.
         {
             return context.Set<T>().Include(parameter).ToList();        
+        }
+
+        public List<T> List(Expression<Func<T, bool>> filter)
+        {
+            return context.Set<T>().Where(filter).ToList();
         }
     }
 }
