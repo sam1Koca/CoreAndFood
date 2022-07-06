@@ -10,7 +10,7 @@ Core And Food Adlı Projesi <a href="https://www.youtube.com/playlist?list=PLKnj
 </li>
 
 <article>
-<h2>🧵 About Core And Fodd Project:</h2>
+<h2>🧵 About Core And Food Project:</h2>
   <ul>
   <ol>👀 Entity Framework</ol>
   <ol>🤜🏽 MVC & Repositories Design Patterns</ol>
